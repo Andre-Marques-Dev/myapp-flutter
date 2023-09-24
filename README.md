@@ -1,3 +1,10 @@
+# dart create
+
+dart create '<nome do projeto>'
+dart create -t console '<nome do projeto>'
+cd '<nome do projeto>'
+dart run
+
 # Comands Flutter
 
 git clone <https://github.com/flutter/flutter.git> -b stable
