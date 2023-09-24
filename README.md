@@ -1,3 +1,11 @@
+# Comands Flutter
+
+git clone <https://github.com/flutter/flutter.git> -b stable
+
+flutter create
+
+flutter create -t app --org com.companyname.packagename -a kotlin -i swift myapp
+
 # myapp
 
 A new Flutter project.
