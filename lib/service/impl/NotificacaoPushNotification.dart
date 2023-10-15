@@ -1,4 +1,4 @@
-import 'package:myapp_oo/service/NotificacaoInterface.dart';
+import 'package:meu_app_oo/service/NotificacaoInterface.dart';
 
 import '../../classes/pessoa_abstract.dart';
 

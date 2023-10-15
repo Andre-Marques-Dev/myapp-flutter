@@ -1,4 +1,4 @@
-import 'package:myapp/functions/utils.dart' as utils;
+import 'package:meu_app/functions/utils.dart' as utils;
 
 Future<void> main(List<String> arguments) async {
   print("Bem-vindos à nossa calculadora!");

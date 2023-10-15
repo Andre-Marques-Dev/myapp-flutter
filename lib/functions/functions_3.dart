@@ -1,4 +1,4 @@
-import 'package:myapp/functions/utils.dart' as utils;
+import 'package:meu_app/functions/utils.dart' as utils;
 
 void main(List<String> arguments) {
   var line = utils.lerConsole("Digite um número ou 'S' para sair");

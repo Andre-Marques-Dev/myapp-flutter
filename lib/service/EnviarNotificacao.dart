@@ -1,9 +1,9 @@
-import 'package:myapp_oo/classes/pessoa_abstract.dart';
-import 'package:myapp_oo/enum/tipo_notificacao.dart';
-import 'package:myapp_oo/service/NotificacaoInterface.dart';
-import 'package:myapp_oo/service/impl/NotificacaoEmail.dart';
-import 'package:myapp_oo/service/impl/NotificacaoPushNotification.dart';
-import 'package:myapp_oo/service/impl/NotificacaoSMS.dart';
+import 'package:meu_app_oo/classes/pessoa_abstract.dart';
+import 'package:meu_app_oo/enum/tipo_notificacao.dart';
+import 'package:meu_app_oo/service/NotificacaoInterface.dart';
+import 'package:meu_app_oo/service/impl/NotificacaoEmail.dart';
+import 'package:meu_app_oo/service/impl/NotificacaoPushNotification.dart';
+import 'package:meu_app_oo/service/impl/NotificacaoSMS.dart';
 
 class EnviarNotificacao {
   NotificacaoInterface? notificacao;

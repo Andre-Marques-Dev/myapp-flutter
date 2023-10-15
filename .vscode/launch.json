@@ -8,7 +8,7 @@
       "name": "meu_a${pathSeparator}",
       "request": "launch",
       "type": "dart",
-      "program": "bin/myapp.dart"
+      "program": "bin/meu_app.dart"
     }
   ]
 }
