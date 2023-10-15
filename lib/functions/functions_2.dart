@@ -1,34 +1,41 @@
-import 'dart:io';
+import 'package:myapp/functions/utils.dart' as utils;
 
-import 'package:meu_app/functions/utils.dart' as utils;
+Future<void> main(List<String> arguments) async {
+  print("Bem-vindos à nossa calculadora!");
 
-void main(List<String> arguments) {
-  print("Bem vindos a nossa calculadora!");
+  var numero1 = lerConsoleDouble("Informe o primeiro número:");
 
-  var numero1 = utils.lerConsoleDouble("Informe o primeiro número:");
+  var numero2 = lerConsoleDouble("Informe o segundo número:");
 
-  var numero2 = utils.lerConsoleDouble("Informe o segundo número:");
-
-  var operacao =
-      utils.lerConsole("Informe a operação matemática (+, -, *, /):");
+  var operacao = lerConsole("Informe a operação matemática (+, -, *, /):");
 
   calcular(operacao, numero1, numero2);
+}
+
+double lerConsoleDouble(String prompt) {
+  stdout.write(prompt);
+  return double.parse(stdin.readLineSync()!);
+}
+
+String lerConsole(String prompt) {
+  stdout.write(prompt);
+  return stdin.readLineSync()!;
 }
 
 void calcular(String operacao, double numero1, double numero2) {
   double resultado = 0;
   switch (operacao) {
     case "+":
-      resultado = utils.soma(numero1, numero2);
+      resultado = soma(numero1, numero2);
       break;
     case "-":
-      resultado = utils.subtracao(numero1, numero2);
+      resultado = subtracao(numero1, numero2);
       break;
     case "*":
-      resultado = utils.multiplicacao(numero1, numero2);
+      resultado = multiplicacao(numero1, numero2);
       break;
     case "/":
-      resultado = utils.divisao(numero1, numero2);
+      resultado = divisao(numero1, numero2);
       break;
     default:
       print("Operação inválida!");
@@ -36,4 +43,24 @@ void calcular(String operacao, double numero1, double numero2) {
   }
   print("Operação solicitada: $operacao");
   print("O resultado da operação é: $resultado");
+}
+
+double soma(double numero1, double numero2) {
+  return numero1 + numero2;
+}
+
+double subtracao(double numero1, double numero2) {
+  return numero1 - numero2;
+}
+
+double multiplicacao(double numero1, double numero2) {
+  return numero1 * numero2;
+}
+
+double divisao(double numero1, double numero2) {
+  if (numero2 == 0) {
+    print("Erro: divisão por zero não é permitida.");
+    exit(0);
+  }
+  return numero1 / numero2;
 }
